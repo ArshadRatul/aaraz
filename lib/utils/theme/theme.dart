@@ -14,7 +14,7 @@ class TAppTheme{
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     textTheme: TTextTheme.lightTextTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButton,
+    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
   );
 
   static ThemeData DarkTheme= ThemeData(
@@ -24,6 +24,6 @@ class TAppTheme{
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.black,
     textTheme: TTextTheme.darkTextTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButton,
+    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
   );
 }
