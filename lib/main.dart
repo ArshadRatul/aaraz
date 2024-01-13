@@ -6,7 +6,7 @@ import 'features/authentication/screens/onboard.dart';
 
 void main() {
 
-  runApp(const OnBoardScreen());
+  runApp(const App());
 
 }
 
