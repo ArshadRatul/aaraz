@@ -1,13 +1,14 @@
 flutter_native_splash:
   color: "#FFFFFF"
   color_dark: "#272727"
-  image: "assets/logos/arraz.png"
-  image_dark: "assets/logos/arraz.png"
+  image: "assets/logos/arraz2.png"
+  image_dark: "assets/logos/arraz2.png"
+
 
   android_12:
     color: "#FFFFFF"
     color_dark: "#272727"
-    image: "assets/logos/arraz.png"
-    image_dark: "assets/logos/arraz.png"
+    image: "assets/logos/arraz2.png"
+    image_dark: "assets/logos/arraz2.png"
 
   web: false
