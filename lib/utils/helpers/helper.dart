@@ -16,4 +16,8 @@ class THelperFunction{
   static double getScreenWidth(){
     return MediaQuery.of(Get.context!).size.width;
   }
+
+  static double getAppBarHeight(){
+    return kToolbarHeight;
+  }
 }

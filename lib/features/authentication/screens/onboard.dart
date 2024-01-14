@@ -32,7 +32,11 @@ class OnBoardScreen extends StatelessWidget {
               ),
             ],
           ),
+          
           // Skip button
+          Positioned(top: THelperFunction.getAppBarHeight(),right: TSize.defaultSpacing, child: TextButton(onPressed: (){}, child: const Text("Skip"),))
+
+
 
         ],
       )
