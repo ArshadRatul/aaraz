@@ -1,8 +1,13 @@
+import 'package:aaraz/features/authentication/screens/widgets/OnboardBottomNavigation.dart';
+import 'package:aaraz/features/authentication/screens/widgets/OnboardScreens.dart';
+import 'package:aaraz/utils/constants/colors.dart';
 import 'package:aaraz/utils/constants/images_string.dart';
 import 'package:aaraz/utils/constants/size.dart';
 import 'package:aaraz/utils/constants/text.dart';
 import 'package:aaraz/utils/helpers/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardScreen extends StatelessWidget {
   const OnBoardScreen({super.key});
@@ -34,8 +39,21 @@ class OnBoardScreen extends StatelessWidget {
           ),
           
           // Skip button
-          Positioned(top: THelperFunction.getAppBarHeight(),right: TSize.defaultSpacing, child: TextButton(onPressed: (){}, child: const Text("Skip"),))
+          Positioned(top: THelperFunction.getAppBarHeight(),right: TSize.defaultSpacing, child: TextButton(onPressed: (){}, child: const Text("Skip"),)),
 
+          //Dot navigation
+          OnBoardingNavigation(),
+
+          //button
+          Positioned(
+              right: TSize.defaultSpacing,
+              bottom: THelperFunction.getBottomNavigationBarHeight(),
+              child: ElevatedButton(
+                  onPressed: (){},
+                style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                child: const Icon(Iconsax.arrow_right_3),
+              )
+          )
 
 
         ],
@@ -44,35 +62,6 @@ class OnBoardScreen extends StatelessWidget {
   }
 }
 
-class onboardscreen extends StatelessWidget {
-  const onboardscreen({
-    super.key, required this.image, required this.title, required this.subTitle,
-  });
-  final String image,title, subTitle;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(TSize.defaultSpacing),
-      child: Column(
-        children: [
-          Image(
-            width: THelperFunction.getScreenWidth() * 0.8,
-            height: THelperFunction.getScreenHeight() * 0.6,
-            image:  AssetImage(image),
-          ),
-          Text(
-            title,
-            style: Theme.of(context).textTheme.headlineMedium,
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: TSize.spaceBtwItems,),
-          Text(
-            subTitle,
-            style: Theme.of(context).textTheme.headlineSmall,
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
-    );
-  }
-}
+
+
+

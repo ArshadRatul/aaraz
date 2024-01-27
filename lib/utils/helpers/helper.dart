@@ -20,4 +20,7 @@ class THelperFunction{
   static double getAppBarHeight(){
     return kToolbarHeight;
   }
+  static double getBottomNavigationBarHeight(){
+    return kBottomNavigationBarHeight;
+  }
 }
