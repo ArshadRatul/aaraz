@@ -1,3 +1,4 @@
+import 'package:aaraz/features/authentication/controllers/onboardControllers/onboardController.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -12,11 +13,13 @@ class OnBoardingNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = OnBoardController.instance;
     return Positioned(
         bottom: THelperFunction.getBottomNavigationBarHeight() + 25 ,
         left: TSize.defaultSpacing,
         child: SmoothPageIndicator(
-          controller: PageController(),
+          controller: controller.pageController,
+          onDotClicked: controller.dotNavigationClick,
           count: 3,
           effect: ExpandingDotsEffect(activeDotColor: TColors.light, dotHeight: 10),)
     );
